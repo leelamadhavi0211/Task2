@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #8D58BF;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      margin: 10px auto;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #8D58BF;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: lightblue;
+    }
+    section {
+      background-color:#8D58BF;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: white;
+      color: black;
+      border: 3px solid white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #8D58BF;
+    }
+ </style>
+</head>
+<body>
+  <header>
+    <h1>Contact Page</h1>
+  </header>
+
+  <nav>
+    <a href="contact.html">Contact Form</a>
+    <a href="todo.html">To-Do List</a>
+  </nav>
+
+  <section>
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="First Name" required>
+      <input type="text" id="name" placeholder="Last Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you, ' + document.getElementById('name').value + '! Your message has been sent.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
